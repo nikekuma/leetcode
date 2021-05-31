@@ -64,3 +64,37 @@ var findMedianSortedArrays = function(num1, num2) {
         return sortedArr[midIndex];
     } 
 };
+
+var findMedianSortedArrays = function(num1, num2) {
+	let m = num1.length;
+  let n = num2.length;
+  let i = 0;
+  let j = 0;
+  let count = 0;
+  let m1 = -1;
+  let m2 = -1;
+  if ((m + n) % 2 === 0) {
+  	for (let count = 0; count <= (m + n)/2; count++) {
+    	m2 = m1;
+      if (i !== m && j !== n) {
+      	m1 = num1[i] < num2[j] ? num1[i++] : num2[j++];
+      } else if (i < m) {
+      	m1 = num1[i++];
+      } else {
+      	m1 = num2[j++];
+      }
+    }
+    return (m1 + m2)/2;
+  } else {
+  	for (let count = 0; count <= (m + n)/2; count++) {
+    	if (i !== m && j !== n) {
+      	m1 = num1[i] < num2[j] ? num1[i++] : num2[j++];
+      } else if (i < m) { 
+      	m1 = num1[i++];
+      } else {
+      	m1 = num2[j++];
+      }
+    }
+    return m1;
+  }
+};
