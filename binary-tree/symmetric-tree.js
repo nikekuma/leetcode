@@ -46,6 +46,10 @@ var solve =  function(root1, root2) {
     }  
 }
 
+/**
+ * @param {TreeNode} root
+ * @return {boolean}
+ */
 var isSymmetric = function(root) {
     if (!root) {
         true;

@@ -51,6 +51,10 @@ var solve = function(root, lev) {
     solve(root.right, lev+1);  
 }
 
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
 var averageOfLevels = function(root) {
     if (root === null) {
         return null;

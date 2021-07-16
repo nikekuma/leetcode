@@ -59,6 +59,10 @@ var solve = function(root) {
     return secmin;
 }
 
+/**
+ * @param {TreeNode} root
+ * @return {number}
+ */
 var firmin = 0;
 var secmin = 0;
 var findSecondMinimumValue = function(root) {

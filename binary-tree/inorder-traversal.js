@@ -52,6 +52,10 @@ var solve = function(root, ans) {
     solve(root.right, ans);
 };
 
+/**
+ * @param {TreeNode} root
+ * @return {number[]}
+ */
 var inorderTraversal = function(root) {
     let curr = root;
     let ans = [];
